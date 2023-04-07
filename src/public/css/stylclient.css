@@ -1,0 +1,70 @@
+.id-rsocial{
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.seg-rfc{
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.dir {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.ac {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.ap {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.utility-credit {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.docs {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.banc {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.pay {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem
+}
+
+.botonescrud{
+  display: flex;
+    flex-direction: row;
+    margin: 1rem
+}
+.botonaddcliente{
+  margin: 1rem;
+}
+
+.botonupdatecliente {
+  margin: 1rem;
+}
+
+.botondelcliente {
+  margin: 1rem;
+}

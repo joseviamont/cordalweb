@@ -1,0 +1,68 @@
+meta(charset="utf-8")
+meta(name="viewport" content="width=device-width,initial-scale=1")
+meta(name="description", content)
+meta(name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors")
+meta(name="generator" content="Hugo 0.108.0")
+title Sistema Cordal
+link(href="css/bootstrap.min.css" rel="stylesheet")
+link(href="css/styls1.css" rel="stylesheet")
+
+body.body-fondo
+nav.navbar.navbar-expand-lg.navbar.bg-primary
+  .container-fluid
+    a.navbar-brand(href="#")
+      img(class="mb-4" src="img/logoSolutesa.svg" alt="" width="72" height="57")
+    button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarSupportedContent
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current="page" href="#") Home
+        li.nav-item
+          a.nav-link(href="#") Link
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Menu
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href="#") PRODUCTOS
+            li
+              a.dropdown-item(href="#") CLIENTES
+            li
+              a.dropdown-item(href="#") VENTAS
+            li
+              a.dropdown-item(href="#") EXISTENCIAS EN ALMACEN
+            li
+              a.dropdown-item(href="#") ALMACEN
+            li
+              a.dropdown-item(href="#") USUARIOS
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href="#") Otros
+        li.nav-item
+          a.nav-link.disabled Disabled
+      form.d-flex(role="search")
+        input.form-control.me-2(type="search" placeholder="Search" aria-label="Search")
+        button.btn.btn-outline-success.btn-info(type="submit") Search
+div.logout#logout
+  a.btn.btn-primary.btn-lg.btn-logout(type="button" href  ="logout") LOGOUT
+h1.encabezado-principal Menú principal
+  div.botones-menu-principal
+    form#pre-info-form(action="http://localhost:4000/api/prefacturas" method="GET")
+      button.btn.btn-outline-success.btn-info.prefactura#prefactura(type="submit") PRODUCTOS
+  div.botones-menu-principal
+    a.btn.btn-outline-success.btn-info.clientes#clientes(type="button" href="http://localhost:4000/api/clientes/todos/all") CLIENTES
+  div.botones-menu-principal
+    form#cot-info-form(action="http://localhost:4000/api/cotizaciones" method="GET")
+      button.btn.btn-outline-success.btn-info.cotizaciones#cotizaciones(type="submit" ) VENTAS
+  div.botones-menu-principal
+    form#dash-info-form(action="http://localhost:4000/api/dashboard" method="GET")
+      button.btn.btn-outline-success.btn-info.dashboard#dashboard(type="submit") EXISTENCIAS EN ALMACEN
+  div.botones-menu-principal
+    form#alm-info-form(action="http://localhost:4000/api/almacen" method="GET")
+      button.btn.btn-outline-success.btn-info.almacen#almacen(type="submit") ALMACEN
+  div.botones-menu-principal
+    a.btn.btn-outline-success.btn-info.usuarios#usuarios(type="button" href="http://localhost:4000/reg") USUARIOS
+
+script(src="js/bootstrap.bundle.min.js")
+script(src="js/enrutapagina.js")

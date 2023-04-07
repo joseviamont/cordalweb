@@ -1,0 +1,26 @@
+meta(charset="utf-8")
+meta(name="viewport" content="width=device-width,initial-scale=1")
+meta(name="description", content)
+meta(name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors")
+meta(name="generator" content="Hugo 0.108.0")
+title Login Cordal
+link(href="css/bootstrap.min.css" rel="stylesheet")
+
+link(href="css/sign-in.css" rel="stylesheet")
+link(href="css/styles.css" rel="stylesheet")
+main.form-signin.w-100.m-auto.text-center.shadow-lg.p-3.mb-5
+  form#formLogin.login-form(action="http://localhost:4000/api/auth/login" method="post") 
+    img.mb-4(src="img/logoSolutesa.svg", alt, width="72" height="57")
+    h1.h3.mb-3.fw-normal Login Cordal
+    div.form-floating
+      input.form-control#user(type="text" name="usuario" placeholder="Usuario")
+      label(for="user") Usuario
+    div.form-floating
+      input.form-control#pass(type="password" name="password" placeholder="Contraseña")
+      label(for="pass") Contraseña
+    div.checkbox.mb-3 
+    button.w-100.btn.btn-lg.btn-primary(type="submit") Login
+  br
+  a.w-100.btn.btn-lg.btn-bd-primary(type="button" href="http://localhost:4000/reg" hidden) Registrarse
+
+script(src="js/enviaDatos.js") 

@@ -1,0 +1,111 @@
+meta(charset="utf-8")
+meta(name="viewport" content="width=device-width,initial-scale=1")
+meta(name="description", content)
+meta(name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors")
+meta(name="generator" content="Hugo 0.108.0")
+title Clientes
+link(href="css/bootstrap.min.css" rel="stylesheet")
+link(href="css/styls1.css" rel="stylesheet")
+link(href="css/stylclient.css" rel="stylesheet")
+
+body.body-fondo
+
+h1.encabezado-principal CLIENTES
+div.home#home
+  a.btn.btn-primary.btn-lg.btn-home(type="button" href  ="http://localhost:4000/pagmain") Menú principal
+
+  //- div.botones-menu-principal
+
+  //- form#cli-info-form(action="http://localhost:4000/api/clientes" method="GET")
+  //-   button.btn.btn-outline-success.btn-info.clientes#clientes(type="submit") CLIENTES
+br
+br
+br
+div 
+  label SELECCIONA AL CLIENTE   
+    select#clientescb(onchange="seleccionarCliente();") 
+  br
+  br
+div.id-rsocial
+  label id
+    input(type="text" name="id")#client-info-id.content__text
+  label Razón social
+    input(type="text" name="razonsocial")#client-info-razonsocial.content__text
+div.seg-rfc 
+  label Segmento
+    input(type="text" name="segmento")#client-info-segmento.content__text
+  label RFC
+    input(type="text" name="rfc")#client-info-rfc.content__text
+div.dir
+  label Dirección
+    input(type="text" name="direccion")#client-info-direccion.content__text
+div.ac
+  label ÁREA DE COMPRAS
+  label Nombre
+    input(type="text" name="acnombre")#client-info-acnombre.content__text
+  label Teléfono
+    input(type="text" name="actelefono")#client-info-actelefono.content__text
+  label Correo
+    input(type="text" name="accorreo")#client-info-accorreo.content__text
+div.ap
+  label ÁREA DE PAGOS
+  label Nombre
+    input(type="text" name="apnombre")#client-info-apnombre.content__text
+  label Teléfono
+    input(type="text" name="aptelefono")#client-info-aptelefono.content__text
+  label Correo
+    input(type="text" name="apcorreo")#client-info-apcorreo.content__text
+div.utility-credit
+  label Margen de ganancia
+    input(type="text" name="margendeganancia")#client-info-margendeganancia.content__text
+  label Crédito
+    select(type="text" name="credito")#client-info-credito.content__text
+      option(value="SI") Sí
+      option(value="NO") No 
+  label Límite de crédito ($)
+    input(type="text" name="limitedecreditod")#client-info-limitedecreditod.content__text
+  label Límite de crédito (Días)
+    input(type="text" name="limitedecreditot")#client-info-limitedecreditot.content__text
+div.docs
+  label Documentación
+    select(type="text" name="documentacion")#client-info-documentacion.content__text
+      option(value="SI") Sí
+      option(value="NO") No 
+  label Licencia sanitaria
+    input(type="text" name="licenciasanitaria")#client-info-licenciasanitaria.content__text
+  label Cédula profesional
+    input(type="text" name="cedulaprofesional")#client-info-cedulaprofesional.content__text
+  label Receta médica
+    input(type="text" name="recetamedica")#client-info-recetamedica.content__text
+div.banc
+  label Cuenta Bancaria
+    input(type="text" name="cuentabancaria")#client-info-cuentabancaria.content__text
+  label Clave Interbancaria
+    input(type="text" name="claveinterbancaria")#client-info-claveinterbancaria.content__text
+  label Banco
+    input(type="text" name="banco")#client-info-banco.content__text
+div.pay
+  label Forma de pago
+    input(type="text" name="formadepago")#client-info-formadepago.content__text
+br
+br
+div.botonescrud
+  button.botonaddcliente#botonaddcliente(type="button" onclick="agregaCliente();") AGREGAR CLIENTE
+
+  button.botonupdatecliente#botonupdatecliente(type="button" onclick="actualizaCliente();") ACTUALIZAR CLIENTE
+
+  button.botondelcliente#botondelcliente(type="button" onclick="eliminaCliente();") ELIMINAR CLIENTE
+
+
+div.contenido 
+  h1 Visualizador de Docs
+  //- form
+  input(type="file" name="pdffFile" required)#pdffFile
+  button Subir PDF
+
+  embed(type="application/pdf" width="400" height="400")#vistaPrevia
+
+//- button#user-info-button.button.button--edit Agregar usuario
+
+script(src="js/bootstrap.bundle.min.js")
+script(src="js/clientes.js")

@@ -1,0 +1,49 @@
+doctype html
+html(lang='es')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0')
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+        link(rel="stylesheet", href="css/stylesregister.css")
+        link(rel="stylesheet", href="css/styls1.css")
+    body
+        main#main.main
+          div.home#home
+            a.btn.btn-primary.btn-lg.btn-home(type="button" href  ="http://localhost:4000/pagmain") Menú principal
+            #all-users.all-users
+                .top-bar
+                    h1.top-bar__title Todos los usuarios
+                #content-users.content
+                    .content__header
+                        -const headers = ['nombre', 'activo', 'usuario', 'opciones']
+                        each header in headers
+                            p.content__text.content__text--header= header
+
+                    .content__users
+                    -const users = allUsers
+                        each user in users
+                            div(data-id= user.id).content__user
+                                p.content__text= user.nombre  
+                                p.content__text= user.activo 
+                                //- p.content__text.content__text--email= user.activo
+                                p.content__text= user.usuario
+                                //- p.content__text= user.password 
+                                button.button.button--edit Editar
+                                    i.fas.fa-pen
+                                button(data-id= user.id).button.button--delete Borrar
+                                    i.fas.fa-trash
+            #user-info.user-info
+                .top-bar
+                    h1#user-info-title.top-bar__title Nuevo usuario
+                form(action="http://localhost:4000/api/usuarios" method="POST")#user-info-form.content__user.content__user--user-info
+                    label Nombre
+                        input(type="text" name="nombre")#user-info-name.content__text
+                    label Activo
+                        input(type="number" name="activo")#user-info-surname.content__text
+                    label Usuario
+                        input(type="text" name="usuario")#user-info-email.content__text
+                    label Password
+                        input(type="text" name="password")#user-info-email.content__text
+                    button#user-info-button.button.button--edit Agregar usuario
+                    button.button.button--cancel Cancelar
+            script(src="js/registrarusuarios.js")
